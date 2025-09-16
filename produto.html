@@ -1,25 +1,171 @@
-<ul>
-        <li>
-    <a href = "index.html"> ir pro index </a>
-        </li>
-    </ul>
-<ul>
-        <li>
-    <a href = "produto1.html"> ir pro produto1 </a>
-        </li>
-    </ul>
-<ul>
-        <li>
-    <a href = "produto2.html"> ir pro produto2 </a>
-        </li>
-    </ul>
-<ul>
-        <li>
-    <a href = "produto3.html"> ir pro produto3 </a>
-        </li>
-    </ul>
-<ul>
-        <li>
-    <a href = "produto4.html"> ir pro produto4 </a>
-        </li>
-    </ul>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos - NecroCorp</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0d0d0d 60%, #2d0036 100%);
+            color: #e0e0e0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: #1a001a;
+            border-radius: 12px;
+            box-shadow: 0 0 24px 6px #2d0036;
+            padding: 2rem;
+        }
+        h1 {
+            color: #b30000;
+            text-shadow: 0 0 12px #2d0036;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .intro {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            color: #e0e0e0;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 1.2rem;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+        }
+        th {
+            background: #2d0036;
+            color: #b30000;
+            font-size: 1.1rem;
+            border-radius: 8px 8px 0 0;
+        }
+        td {
+            background: #1a001a;
+            color: #e0e0e0;
+            border-radius: 0 0 8px 8px;
+            vertical-align: middle;
+            box-shadow: 0 0 12px #2d0036 inset;
+        }
+        .product-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 8px;
+            box-shadow: 0 0 16px #b30000;
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+            filter: grayscale(30%) brightness(0.8) drop-shadow(0 0 8px #2d0036);
+        }
+        .product-img:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 0 32px #b30000;
+            filter: grayscale(0%) brightness(1) drop-shadow(0 0 16px #b30000);
+        }
+        .product-name {
+            color: #b30000;
+            font-weight: bold;
+            font-size: 1.15rem;
+            text-shadow: 0 0 8px #2d0036;
+        }
+        .product-desc {
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+        .product-price {
+            color: #e60000;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            opacity: 0.85;
+        }
+        footer {
+            background: #0d0d0d;
+            color: #b30000;
+            text-align: center;
+            padding: 1.2rem 0 0.5rem 0;
+            font-size: 1rem;
+            box-shadow: 0 -4px 20px #2d0036;
+            margin-top: 2rem;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 1rem;
+            }
+            table, th, td {
+                font-size: 0.95rem;
+            }
+            .product-img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Produtos Assustadoramente Profissionais</h1>
+        <div class="intro">
+            <p>Na NecroCorp, nossos produtos são criados para transformar pesadelos empresariais em conquistas eternas. Cada item foi desenvolvido nas profundezas da inovação sombria, trazendo soluções que arrepiam até os concorrentes mais corajosos.</p>
+            <p>Com tecnologia de outro mundo e design sobrenatural, oferecemos ferramentas que vão além do convencional, garantindo resultados de arrepiar. Descubra nossa seleção e prepare-se para uma experiência empresarial que desafia a lógica e o medo.</p>
+            <p>Seja para ressuscitar negócios adormecidos ou proteger sua empresa das ameaças invisíveis do mercado, nossos produtos são a escolha dos que não temem a escuridão.</p>
+        </div>
+        <table>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td><a href="#"><img class="product-img" src="https://placehold.co/90x90/2d0036/b30000?text=Specter" alt="Specter Analytics"></a></td>
+                <td class="product-name">Specter Analytics</td>
+                <td class="product-desc">Ferramenta de análise que revela dados ocultos e tendências fantasmagóricas para decisões de arrepiar.</td>
+                <td class="product-price">R$ 2.499,00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img class="product-img" src="https://placehold.co/90x90/0d0d0d/e60000?text=Crypta" alt="Crypta Firewall"></a></td>
+                <td class="product-name">Crypta Firewall</td>
+                <td class="product-desc">Proteção sobrenatural contra ameaças digitais, mantendo sua empresa segura até dos piores pesadelos virtuais.</td>
+                <td class="product-price">R$ 1.799,00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img class="product-img" src="https://placehold.co/90x90/b30000/2d0036?text=NecroBot" alt="NecroBot"></a></td>
+                <td class="product-name">NecroBot</td>
+                <td class="product-desc">Assistente automatizado que trabalha incansavelmente, mesmo nas horas mais sombrias da madrugada.</td>
+                <td class="product-price">R$ 3.299,00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img class="product-img" src="https://placehold.co/90x90/2d0036/e60000?text=Vamp+CRM" alt="Vamp CRM"></a></td>
+                <td class="product-name">Vamp CRM</td>
+                <td class="product-desc">Gestão de relacionamento que suga oportunidades do mercado e mantém clientes eternamente fiéis.</td>
+                <td class="product-price">R$ 2.899,00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img class="product-img" src="https://placehold.co/90x90/0d0d0d/b30000?text=Phantom" alt="Phantom Cloud"></a></td>
+                <td class="product-name">Phantom Cloud</td>
+                <td class="product-desc">Armazenamento em nuvem com criptografia espectral, seus dados protegidos por forças invisíveis.</td>
+                <td class="product-price">R$ 1.499,00</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img class="product-img" src="https://placehold.co/90x90/2d0036/b30000?text=Dark+Suite" alt="Dark Suite"></a></td>
+                <td class="product-name">Dark Suite</td>
+                <td class="product-desc">Pacote completo de soluções empresariais para quem deseja dominar a escuridão do mercado.</td>
+                <td class="product-price">R$ 4.999,00</td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        &copy; 2025 NecroCorp. Todos os direitos reservados. | contato@necrocorp.com | (99) 99999-9999
+    </footer>
+</body>
+</html>
