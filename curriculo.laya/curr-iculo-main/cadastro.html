@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Corporativo — NecroCorp</title>
+    <meta name="description" content="Formulário formal de cadastro corporativo da NecroCorp.">
+    <meta name="author" content="NecroCorp">
+</head>
+<body>
+    <header>
+        <h1>Cadastro Corporativo</h1>
+        <p>Utilize este formulário para registrar a sua empresa junto à NecroCorp. Campos marcados com * são obrigatórios.</p>
+        <nav>
+            <a href="index.html">Início</a> |
+            <a href="produto.html">Produtos</a> |
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+            <fieldset>
+                <legend>Dados da empresa</legend>
+
+                <label for="razao_social">Razão Social *</label>
+                <input type="text" id="razao_social" name="razao_social" required maxlength="200" aria-required="true">
+
+                <label for="nome_fantasia">Nome Fantasia</label>
+                <input type="text" id="nome_fantasia" name="nome_fantasia" maxlength="200">
+
+                <label for="cnpj">CNPJ * (somente números, 14 dígitos)</label>
+                <input type="text" id="cnpj" name="cnpj" pattern="\d{14}" inputmode="numeric" placeholder="12345678000195" required aria-required="true">
+
+                <label for="data_fundacao">Data de fundação</label>
+                <input type="date" id="data_fundacao" name="data_fundacao">
+
+                <label for="tipo_societario">Tipo societário</label>
+                <select id="tipo_societario" name="tipo_societario">
+                    <option value="">-- selecione --</option>
+                    <option>LTDA</option>
+                    <option>S.A.</option>
+                    <option>MEI</option>
+                    <option>EIRELI</option>
+                    <option>Cooperativa</option>
+                    <option>Outro</option>
+                </select>
+
+                <label for="atividade_principal">Atividade principal *</label>
+                <textarea id="atividade_principal" name="atividade_principal" rows="4" required aria-required="true"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações de contato</legend>
+
+                <label for="responsavel_nome">Nome do responsável *</label>
+                <input type="text" id="responsavel_nome" name="responsavel_nome" required maxlength="120">
+
+                <label for="responsavel_cargo">Cargo do responsável</label>
+                <input type="text" id="responsavel_cargo" name="responsavel_cargo" maxlength="80">
+
+                <label for="email">E‑mail de contato *</label>
+                <input type="email" id="email" name="email" required placeholder="contato@exemplo.com">
+
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(99) 99999-9999" pattern="[0-9()+\-\s]{8,20}">
+
+                <label for="site">Website</label>
+                <input type="url" id="site" name="site" placeholder="https://www.exemplo.com">
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço comercial</legend>
+
+                <label for="cep">CEP (somente números)</label>
+                <input type="text" id="cep" name="cep" pattern="\d{8}" placeholder="01001000" inputmode="numeric">
+
+                <label for="logradouro">Logradouro</label>
+                <input type="text" id="logradouro" name="logradouro" maxlength="200">
+
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero" maxlength="20">
+
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento" maxlength="100">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" maxlength="100">
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" maxlength="100">
+
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                    <option value="">-- selecione --</option>
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>DF</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações operacionais</legend>
+
+                <label for="n_funcionarios">Número de funcionários</label>
+                <input type="number" id="n_funcionarios" name="n_funcionarios" min="1" step="1">
+
+                <label for="faturamento_anual">Faturamento anual (faixa)</label>
+                <select id="faturamento_anual" name="faturamento_anual">
+                    <option value="">-- selecione --</option>
+                    <option>Até R$ 360.000</option>
+                    <option>R$ 360.001 – R$ 4.800.000</option>
+                    <option>R$ 4.800.001 – R$ 20.000.000</option>
+                    <option>Acima de R$ 20.000.000</option>
+                </select>
+
+                <label for="regime_tributario">Regime tributário</label>
+                <select id="regime_tributario" name="regime_tributario">
+                    <option value="">-- selecione --</option>
+                    <option>Simples Nacional</option>
+                    <option>Lucro Presumido</option>
+                    <option>Lucro Real</option>
+                    <option>Outro</option>
+                </select>
+
+                <label for="produtos_servicos">Principais produtos/serviços</label>
+                <textarea id="produtos_servicos" name="produtos_servicos" rows="4"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Documentos (opcional)</legend>
+                <label for="anexos">Anexar documentos (PDF, DOC, ZIP)</label>
+                <input type="file" id="anexos" name="anexos" accept=".pdf,.doc,.docx,.zip">
+            </fieldset>
+
+            <fieldset>
+                <legend>Consentimento</legend>
+                <input type="checkbox" id="termos" name="termos" required aria-required="true">
+                <label for="termos">Declaro que as informações prestadas são verdadeiras e autorizo o uso para fins comerciais e de contato pela NecroCorp. *</label>
+            </fieldset>
+
+            <div>
+                <button type="submit">Enviar cadastro</button>
+                <button type="reset">Limpar formulário</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NecroCorp. Todas as informações tratadas com confidencialidade.</p>
+        <p><a href="index.html">Voltar para Início</a></p>
+    </footer>
+</body>
+</html>
