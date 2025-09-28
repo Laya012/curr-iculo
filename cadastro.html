@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro NecroCorp</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0d0d0d 60%, #2d0036 100%);
+            color: #e0e0e0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 3rem auto;
+            background: #1a001a;
+            border-radius: 14px;
+            box-shadow: 0 0 32px 8px #2d0036;
+            padding: 2.5rem 2rem 2rem 2rem;
+            position: relative;
+        }
+        h1 {
+            color: #b30000;
+            text-shadow: 0 0 16px #2d0036;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.1rem;
+        }
+        form label {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #e60000;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="date"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 0.7rem 1.2rem 0.7rem 2.2rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid #2d0036;
+            border-radius: 8px;
+            background: #0d0d0d;
+            color: #e0e0e0;
+            font-size: 1rem;
+            transition: border 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 8px #2d0036 inset;
+            outline: none;
+            position: relative;
+        }
+        form input:focus {
+            border: 2px solid #b30000;
+            box-shadow: 0 0 16px #b30000;
+        }
+        .input-icon {
+            position: absolute;
+            left: 2.5rem;
+            margin-top: 2.2rem;
+            font-size: 1.1rem;
+            color: #b30000;
+            pointer-events: none;
+        }
+        .checkbox-group {
+            margin-bottom: 1.2rem;
+        }
+        .checkbox-group label {
+            color: #e0e0e0;
+            font-weight: normal;
+            margin-left: 0.5rem;
+        }
+        .checkbox-group input[type="checkbox"]:focus + label {
+            color: #b30000;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #b30000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 16px #2d0036;
+            margin-top: 0.5rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .submit-btn:hover {
+            background: #e60000;
+            transform: scale(1.04);
+        }
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #b30000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .login-link:hover {
+            color: #e60000;
+        }
+        .required {
+            color: #e60000;
+            margin-left: 0.2rem;
+        }
+        .form-group {
+            position: relative;
+        }
+        .error {
+            color: #e60000;
+            font-size: 0.95rem;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .form-group input:invalid {
+            border: 2px solid #e60000;
+        }
+        .form-group input:invalid ~ .error {
+            display: block;
+        }
+        .skull {
+            position: absolute;
+            right: 1.2rem;
+            top: 1.1rem;
+            font-size: 1.2rem;
+            color: #b30000;
+            pointer-events: none;
+        }
+        @media (max-width: 500px) {
+            .container { padding: 1rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-skull-crossbones"></i> Ritual de Cadastro NecroCorp</h1>
+        <form autocomplete="off">
+            <div class="form-group">
+                <label for="nome">Seu Nome Maldito <span class="required">*</span></label>
+                <span class="input-icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome que ecoa nas sombras" required pattern=".{3,}">
+                <span class="skull"><i class="fa-solid fa-skull"></i></span>
+                <div class="error">Insira um nome válido (mínimo 3 letras).</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Sombrio <span class="required">*</span></label>
+                <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" id="email" name="email" placeholder="exemplo@necrocorp.com.br" required>
+                <span class="skull"><i class="fa-solid fa-ghost"></i></span>
+                <div class="error">Insira um email válido das trevas.</div>
+            </div>
+            <div class="form-group">
+                <label for="nascimento">Data do Seu Surgimento <span class="required">*</span></label>
+                <span class="input-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                <input type="date" id="nascimento" name="nascimento" placeholder="Data do Seu Surgimento" required>
+                <span class="skull"><i class="fa-solid fa-moon"></i></span>
+                <div class="error">Informe a data do seu surgimento neste plano.</div>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha Amaldiçoada <span class="required">*</span></label>
+                <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" id="senha" name="senha" placeholder="Crie uma senha digna do submundo" required pattern=".{6,}">
+                <span class="skull"><i class="fa-solid fa-spider"></i></span>
+                <div class="error">A senha deve ter pelo menos 6 caracteres amaldiçoados.</div>
+            </div>
+            <div class="form-group">
+                <label for="confirmar">Confirme a Maldição <span class="required">*</span></label>
+                <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" id="confirmar" name="confirmar" placeholder="Repita a senha das trevas" required pattern=".{6,}">
+                <span class="skull"><i class="fa-solid fa-spider"></i></span>
+                <div class="error">Repita a senha amaldiçoada corretamente.</div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">Aceito os <a href="#" style="color:#e60000; text-decoration:underline;">Termos de Serviço Obscuros</a> <span class="required">*</span></label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Quero receber a <span style="color:#b30000;">Newsletter Macabra</span></label>
+            </div>
+            <button class="submit-btn" type="submit"><i class="fa-solid fa-crow"></i> Completar Ritual de Cadastro</button>
+        </form>
+        <a class="login-link" href="#">Já possui uma conta assombrada?</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NecroCorp - Apresentação Empresarial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #0d0d0d 60%, #2d0036 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        header {
+            background: #1a001a;
+            box-shadow: 0 4px 20px rgba(80,0,0,0.7);
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #b30000;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #b30000;
+            transition: width .3s;
+            position: absolute;
+            left: 0; bottom: -4px;
+        }
+        nav a:hover {
+            color: #e60000;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 80px 20px #2d0036 inset;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #e0e0e0;
+            text-shadow: 0 0 10px #b30000, 0 0 20px #2d0036;
+            animation: fadeInDown 1.2s ease;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        section {
+            padding: 3rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            color: #b30000;
+            margin-bottom: 1.2rem;
+            text-shadow: 0 0 8px #2d0036;
+            letter-spacing: 2px;
+            animation: flicker 2s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; text-shadow: 0 0 20px #b30000; }
+            100% { opacity: 1; }
+        }
+        .services, .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .card {
+            background: #1a001a;
+            border-radius: 12px;
+            box-shadow: 0 0 24px 6px #2d0036;
+            padding: 2rem;
+            width: 260px;
+            color: #e0e0e0;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: scale(1.05) translateY(-8px);
+            box-shadow: 0 0 40px 10px #b30000;
+        }
+        .card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 16px #b30000;
+            margin-bottom: 1rem;
+            filter: grayscale(30%) brightness(0.7) drop-shadow(0 0 8px #2d0036);
+            transition: filter 0.3s;
+        }
+        .card:hover img {
+            filter: grayscale(0%) brightness(1) drop-shadow(0 0 16px #b30000);
+        }
+        .about {
+            background: linear-gradient(90deg, #2d0036 60%, #0d0d0d 100%);
+            border-radius: 12px;
+            box-shadow: 0 0 24px 6px #b30000;
+            padding: 2rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        .contact {
+            background: #1a001a;
+            border-radius: 12px;
+            box-shadow: 0 0 24px 6px #2d0036;
+            padding: 2rem;
+            color: #e0e0e0;
+        }
+        footer {
+            background: #0d0d0d;
+            color: #b30000;
+            text-align: center;
+            padding: 1.2rem 0 0.5rem 0;
+            font-size: 1rem;
+            box-shadow: 0 -4px 20px #2d0036;
+        }
+        @media (max-width: 900px) {
+            .services, .portfolio {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90vw;
+                max-width: 350px;
+            }
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+            section {
+                padding: 2rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 style="font-size:3rem; color:#b30000;">NecroCorp</h1>
+            <h2 style="font-size:1.5rem; color:#e0e0e0;">Transformando pesadelos em oportunidades de negócio</h2>
+            <p style="font-size:1.1rem; color:#e0e0e0; margin-top:1rem;">Onde o sucesso nunca descansa... nem os nossos clientes.</p>
+        </div>
+    </section>
+    <section id="servicos">
+        <h2 class="section-title">Serviços</h2>
+        <div class="services">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Consultoria Sombria">
+                <h3>Consultoria Sombria</h3>
+                <p>Desenvolvemos estratégias que ressuscitam negócios adormecidos e fazem concorrentes tremerem de medo.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Gestão de Crises">
+                <h3>Gestão de Crises</h3>
+                <p>Enfrentamos tempestades empresariais como quem caminha por cemitérios: com calma, precisão e um toque de mistério.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Marketing de Outro Mundo">
+                <h3>Marketing de Outro Mundo</h3>
+                <p>Campanhas que arrepiam, atraem e hipnotizam clientes como se fossem almas perdidas em busca de soluções.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2 class="section-title">Portfólio</h2>
+        <div class="portfolio">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Projeto Sepulcral">
+                <h3>Projeto Sepulcral</h3>
+                <p>Revitalizamos empresas que estavam à beira do túmulo corporativo, trazendo-as de volta à vida.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Case Fantasma">
+                <h3>Case Fantasma</h3>
+                <p>Resultados tão impressionantes que parecem assombrações: nossos clientes nunca esquecem.</p>
+            </div>
+        </div>
+    </section>
+    <section id="sobre">
+        <h2 class="section-title">Sobre</h2>
+        <div class="about">
+            <p>A NecroCorp nasceu da escuridão do mercado, com o propósito de transformar o medo em força competitiva. Nossa equipe é formada por especialistas que dominam as artes ocultas da gestão, sempre prontos para enfrentar os desafios mais aterrorizantes do mundo corporativo.</p>
+            <p>Com ética sombria e profissionalismo sobrenatural, garantimos que cada projeto seja executado com precisão mortal e resultados de arrepiar.</p>
+        </div>
+    </section>
+    <section id="contato">
+        <h2 class="section-title">Contato</h2>
+        <div class="contact">
+            <p>Entre em contato e descubra como podemos transformar seus pesadelos empresariais em conquistas eternas.</p>
+            <p><strong>Email:</strong> contato@necrocorp.com</p>
+            <p><strong>Telefone:</strong> (99) 99999-9999</p>
+            <p><strong>Endereço:</strong> Rua das Sombras, 666 - Bairro Abissal</p>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 NecroCorp. Todos os direitos reservados. | "Onde o sucesso nunca descansa."
+    </footer>
+</body>
+</html>
